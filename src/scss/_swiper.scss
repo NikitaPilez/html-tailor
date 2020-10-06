@@ -1,0 +1,148 @@
+.swiper-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.horizontal-swiper {
+  padding-left: 20%;
+
+  .swiper-button-next {
+    top: 90%;
+    right: 110px;
+    color: $white;
+
+    &:after {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+  .swiper-button-prev {
+    left: auto;
+    right: 170px;
+    top: 90%;
+    color: $white;
+
+    &:after {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
+
+.swiper-image-container {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.swiper-image-vertical-container {
+  @extend .swiper-image-container;
+}
+
+.page-number {
+  position: absolute;
+  bottom: 70px;
+  right: 70px;
+  font-size: 144px;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.11);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.vertical-swiper {
+  .page-number {
+    @extend .page-number;
+    font-size: 22px;
+    color: darkgrey;
+    top: 0;
+    right: -10px;
+  }
+}
+
+.vertical-swiper {
+  position: absolute;
+  top: 35%;
+
+  .swiper-container {
+    height: 320px;
+  }
+
+  .swiper {
+    &-slide {
+      width: 40px;
+      margin-right: 10px;
+      transition: all 0.5s ease-out;
+
+      &:hover,
+      &-active,
+      &-active:hover{
+        width: 115px;
+      }
+    }
+  }
+}
+
+.description-swiper {
+  position: absolute;
+  top: 37%;
+  left: 15%;
+  width: 700px;
+
+  .swiper-container {
+    width: 100%;
+    height: 600px;
+  }
+}
+
+.description-slide {
+  .description-slide__introduction {
+    margin-bottom: 30px;
+
+    span {
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 0.1rem;
+      color: $white;
+      opacity: 0.8;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 2px;
+      background: white;
+      opacity: 0.8;
+      margin-top: 30px;
+    }
+  }
+
+  .description-slide__header {
+    color: $white;
+    font-weight: 600;
+    font-size: 54px;
+    letter-spacing: 0.05rem;
+    margin-bottom: 30px;
+  }
+
+  .description-slide__details {
+    font-size: 16px;
+    letter-spacing: 0.2rem;
+    color: $white
+  }
+}
+
+.description-swiper {
+  .swiper {
+    &-slide {
+      opacity: 0 !important;
+
+      &-active {
+        opacity: 1 !important;
+      }
+    }
+  }
+}
+
