@@ -1,0 +1,23 @@
+.header-container {
+  position: fixed;
+  width: 100%;
+  max-width: 2560px;
+  padding: 20px 50px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  z-index: 99999;
+  align-items: center;
+
+  &__logo {
+
+  }
+
+  &__menu {
+    margin: 20px;
+  }
+
+  .logo-image {
+    width: 200px;
+  }
+}
